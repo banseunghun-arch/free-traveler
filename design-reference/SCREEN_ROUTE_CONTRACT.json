@@ -1,0 +1,187 @@
+{
+  "schema_version": "traveler-screen-route-v1",
+  "framework": "nextjs-app-router",
+  "generated_at": "2026-09-19",
+  "source_documents": [
+    "docs/03_UI_COVERAGE_ANALYSIS.md",
+    "docs/04_UIUX_PLAN.md",
+    "docs/STITCH_VALIDATION_REPORT.md",
+    "design-reference/D-001/DESIGN.md",
+    "design-reference/UI_CONTRACT.md"
+  ],
+  "screens": [
+    {
+      "screen_id": "SCR-001",
+      "route": "/",
+      "page_entry": "src/app/page.tsx",
+      "tier": "core",
+      "mobile_variant_approved": true,
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": true,
+      "section_count": 7,
+      "sections": [
+        "search_hero",
+        "domestic_destinations_grid",
+        "international_destinations_grid",
+        "travel_motive_chips",
+        "country_safety_grid",
+        "recent_mate_posts_or_empty",
+        "representative_summary"
+      ],
+      "states": ["loading", "success", "empty", "error"],
+      "required_navigation": [
+        { "to_screen": "SCR-003", "to_route": "/travel-tools", "trigger": "여행 조건 정리하기 CTA" },
+        { "to_screen": "SCR-004", "to_route": "/mates", "trigger": "동행 더 보기 CTA" },
+        { "to_screen": "SCR-002", "to_route": "/about", "trigger": "대표 이야기 더 보기 CTA" },
+        { "to_screen": "SCR-005", "to_route": "/account", "trigger": "비로그인 상태에서 동행글 쓰기 CTA" }
+      ],
+      "forbidden_features": [
+        "airbnb_trademark",
+        "booking_payment_ui",
+        "star_rating",
+        "ads",
+        "realtime_price_display",
+        "placeholder_copy",
+        "empty_card"
+      ]
+    },
+    {
+      "screen_id": "SCR-002",
+      "route": "/about",
+      "page_entry": "src/app/about/page.tsx",
+      "tier": "secondary",
+      "mobile_variant_approved": false,
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_count": 7,
+      "sections": [
+        "hero",
+        "travel_stats",
+        "introduction",
+        "timeline",
+        "visited_countries_chips",
+        "photo_gallery",
+        "memorable_destinations_cta"
+      ],
+      "states": ["success", "loading", "error"],
+      "required_navigation": [
+        { "to_screen": "SCR-001", "to_route": "/", "trigger": "방문 국가 Chip 또는 추천 여행지 클릭" },
+        { "to_screen": "SCR-003", "to_route": "/travel-tools", "trigger": "여행 조건 정리하기 CTA" },
+        { "to_screen": "SCR-004", "to_route": "/mates", "trigger": "동행 찾아보기 CTA" }
+      ],
+      "forbidden_features": [
+        "airbnb_trademark",
+        "booking_payment_ui",
+        "star_rating",
+        "ads",
+        "placeholder_copy",
+        "stats_dashboard_or_chart"
+      ]
+    },
+    {
+      "screen_id": "SCR-003",
+      "route": "/travel-tools",
+      "page_entry": "src/app/travel-tools/page.tsx",
+      "tier": "core",
+      "mobile_variant_approved": true,
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_count": 6,
+      "sections": [
+        "intro",
+        "tabs_flight_hotel_mate",
+        "condition_input_form",
+        "summary_and_external_action",
+        "disclaimer_and_tips",
+        "mate_tab_content"
+      ],
+      "states": ["idle", "validating", "summary_success", "error", "unauthorized_guest_mate_tab"],
+      "required_navigation": [
+        { "to_screen": "EXTERNAL", "to_route": "external_flight_hotel_site", "trigger": "항공편/호텔 보러 가기 버튼 (새 탭)" },
+        { "to_screen": "SCR-004", "to_route": "/mates", "trigger": "동행글 작성 완료 후" },
+        { "to_screen": "SCR-005", "to_route": "/account", "trigger": "동행 탭 비로그인 CTA 또는 내 글 확인" }
+      ],
+      "forbidden_features": [
+        "booking_payment_ui",
+        "raw_input_server_persistence",
+        "realtime_price_display",
+        "airbnb_trademark",
+        "placeholder_copy"
+      ]
+    },
+    {
+      "screen_id": "SCR-004",
+      "route": "/mates",
+      "page_entry": "src/app/mates/page.tsx",
+      "tier": "core",
+      "mobile_variant_approved": false,
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_count": 6,
+      "sections": [
+        "intro_and_write_cta",
+        "filter_and_result_summary",
+        "mate_post_list",
+        "list_and_detail_split_or_drawer",
+        "application_steps_guide",
+        "safety_notice_and_cta_banner"
+      ],
+      "states": ["loading", "success", "empty", "error", "unauthorized_action_only"],
+      "required_navigation": [
+        { "to_screen": "SCR-003", "to_route": "/travel-tools", "trigger": "동행글 쓰기 CTA (동행 구하기 탭)" },
+        { "to_screen": "SCR-005", "to_route": "/account", "trigger": "참가 신청 후 상태 확인 또는 비로그인 안내" }
+      ],
+      "forbidden_features": [
+        "contact_info_exposure",
+        "booking_payment_ui",
+        "star_rating",
+        "airbnb_trademark",
+        "placeholder_copy"
+      ]
+    },
+    {
+      "screen_id": "SCR-005",
+      "route": "/account",
+      "page_entry": "src/app/account/page.tsx",
+      "tier": "core",
+      "mobile_variant_approved": false,
+      "page_owner_task_required": true,
+      "preview_required": true,
+      "starter_template_forbidden": false,
+      "section_count": null,
+      "sections": {
+        "guest": ["account_intro", "login_signup_reset_form", "post_login_feature_list", "security_notice"],
+        "member": ["profile_and_adult_verification_summary", "my_posts", "participation_requests", "favorites", "blocked_users", "new_post_cta"],
+        "admin": ["admin_intro", "report_status_queue", "external_url_settings"]
+      },
+      "role_gated_tabs": true,
+      "states": ["unauthorized_guest_default", "loading", "success", "empty", "error"],
+      "required_navigation": [
+        { "to_screen": "SCR-001", "to_route": "/", "trigger": "로그인 성공 시 기본 복귀 화면" },
+        { "to_screen": "SCR-003", "to_route": "/travel-tools", "trigger": "새 동행글 작성 CTA" }
+      ],
+      "forbidden_features": [
+        "complex_admin_dashboard_charts_or_kpi_grid",
+        "content_crud_ui",
+        "generic_audit_log_screen",
+        "airbnb_trademark",
+        "placeholder_copy"
+      ]
+    }
+  ],
+  "technical_routes": [
+    { "type": "auth_callback", "route": "Supabase Auth email verification / password reset callback", "included_in_screen_count": false },
+    { "type": "api_route", "route": "src/app/api/**", "included_in_screen_count": false },
+    { "type": "not_found", "route": "src/app/not-found.tsx", "included_in_screen_count": false }
+  ],
+  "completion_checks": {
+    "route_uniqueness": true,
+    "page_entry_uniqueness": true,
+    "screen_count": 5,
+    "tier_distribution": { "core": 4, "secondary": 1 }
+  }
+}
