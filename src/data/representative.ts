@@ -2,6 +2,7 @@ export interface RepresentativeData {
   name: string;
   title: string;
   bio: string;
+  profileImageUrl: string;
   stats: {
     trips: number;
     countries: number;
@@ -14,6 +15,7 @@ export const representative: RepresentativeData = {
   name: "Free Traveler",
   title: "자유로운 여행자",
   bio: "전 세계 50개 이상의 국가를 방문했으며, 30개국 이상의 도시에서 현지 문화를 경험한 여행 애호가입니다. 매년 새로운 목적지를 탐험하며 동행자들과 경험을 나누고 있습니다.",
+  profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
   stats: {
     trips: 50,
     countries: 30,

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { representative } from "@/data/representative";
 
 export function ProfileHero() {
@@ -7,11 +8,15 @@ export function ProfileHero() {
     <section className="w-full bg-gradient-to-b from-gray-900 to-gray-800 py-20 md:py-32 text-white">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
-          {/* Left: Image placeholder */}
-          <div className="h-96 md:h-full rounded-lg bg-gray-700 flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-gray-400">대표 프로필 사진</p>
-            </div>
+          {/* Left: Profile Image */}
+          <div className="relative h-96 md:h-full w-full rounded-lg overflow-hidden bg-gray-700">
+            <Image
+              src={representative.profileImageUrl}
+              alt={representative.name}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
 
           {/* Right: Info */}

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { MatePost, ParticipationRequest, Block } from '@/lib/db';
-import { Header } from '@/components/shared/Header';
 import { Footer } from '@/components/shared/Footer';
 import { EmptyState } from '@/components/shared/EmptyState';
 import { IntroCta } from '@/components/scr004/IntroCta';
@@ -88,8 +87,6 @@ export default function MatesPageClient({}: MatesPageClientProps) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
-
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-6">
         {/* Section 1: Intro + CTA */}
         <IntroCta />
