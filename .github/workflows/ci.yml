@@ -44,6 +44,9 @@ jobs:
       - name: Unit tests
         run: npm run test:unit
 
+      - name: Data validation
+        run: npm run validate:content
+
       - name: Task contract audit
         run: npm run task:contract
 

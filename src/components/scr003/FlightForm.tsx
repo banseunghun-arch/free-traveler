@@ -190,7 +190,7 @@ export function FlightForm() {
               </Button>
               <Button
                 onClick={handleReset}
-                variant="outline"
+                variant="secondary"
                 className="flex-1"
               >
                 다시 입력하기

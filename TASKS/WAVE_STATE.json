@@ -560,33 +560,33 @@
         "TEST-RLS-BASIC",
         "UNIT-CONTACT-DETECTION"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "CI-PIPELINE-BASE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T12:00:00Z",
+          "note": "CI workflow: format/lint/typecheck/unit/validate-content/task-contract/screen-contract/build/e2e-public"
         },
         {
           "task_id": "E2E-AUTH-SMOKE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T12:05:00Z",
+          "note": "E2E-006~007 test scaffold: login → mate composition → verification. Skip logic for missing env vars."
         },
         {
           "task_id": "E2E-PUBLIC-SMOKE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T12:10:00Z",
+          "note": "E2E-001~005 test scaffold: main/about/travel-tools flows. Role-based + data-testid selectors. External link attr validation only (no site navigation)."
         },
         {
           "task_id": "MANUAL-A11Y-CHECK",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T12:15:00Z",
+          "note": "axe.spec.ts + manual QA checklist (UC-01~09): keyboard navigation, screenreader, ARIA validation"
         },
         {
           "task_id": "MANUAL-PERFORMANCE-CHECK",
