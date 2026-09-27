@@ -590,9 +590,9 @@
         },
         {
           "task_id": "MANUAL-PERFORMANCE-CHECK",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T16:00:00Z",
+          "note": "Lighthouse testing on 5 screens: LCP/INP/CLS metrics recorded. CLS ✅ pass, LCP ❌ above target (dev mode expected), INP ⓘ N/A. Report: docs/LIGHTHOUSE_REPORT_W15.md"
         },
         {
           "task_id": "TEST-RLS-BASIC",
