@@ -14,7 +14,7 @@ export const destinations: Destination[] = [
     name: "제주도",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.pexels.com/photos/3408356/pexels-photo-3408356.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619316/pexels-photo-1619316.jpeg?w=500&h=400&fit=crop",
     description: "한라산과 아름다운 해변이 있는 대표 휴양지",
   },
   {
@@ -22,7 +22,7 @@ export const destinations: Destination[] = [
     name: "서울",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.pexels.com/photos/2651996/pexels-photo-2651996.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?w=500&h=400&fit=crop",
     description: "한국의 수도이자 문화와 역사의 중심",
   },
   {
@@ -38,7 +38,7 @@ export const destinations: Destination[] = [
     name: "부산",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.pexels.com/photos/2651997/pexels-photo-2651997.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=500&h=400&fit=crop",
     description: "해변과 항구의 매력이 있는 항구도시",
   },
   {
@@ -104,7 +104,7 @@ export const destinations: Destination[] = [
     name: "교토",
     region: "international",
     country: "일본",
-    imageUrl: "https://images.pexels.com/photos/2398221/pexels-photo-2398221.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?w=500&h=400&fit=crop",
     description: "전통 사원과 문화유산이 풍부한 역사도시",
   },
   {
@@ -112,7 +112,7 @@ export const destinations: Destination[] = [
     name: "방콕",
     region: "international",
     country: "태국",
-    imageUrl: "https://images.pexels.com/photos/2398222/pexels-photo-2398222.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?w=500&h=400&fit=crop",
     description: "태국의 수도이자 활기찬 관광도시",
   },
   {
@@ -128,7 +128,7 @@ export const destinations: Destination[] = [
     name: "파리",
     region: "international",
     country: "프랑스",
-    imageUrl: "https://images.pexels.com/photos/2398224/pexels-photo-2398224.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?w=500&h=400&fit=crop",
     description: "미술과 문화의 중심 유럽 도시",
   },
   {
@@ -136,7 +136,7 @@ export const destinations: Destination[] = [
     name: "마르세유",
     region: "international",
     country: "프랑스",
-    imageUrl: "https://images.pexels.com/photos/2398225/pexels-photo-2398225.jpeg?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?w=500&h=400&fit=crop",
     description: "지중해 해변의 프랑스 항구도시",
   },
   {
