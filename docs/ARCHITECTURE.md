@@ -143,9 +143,9 @@ Supabase JS 클라이언트(`@supabase/supabase-js`, `@supabase/ssr`)로 직접 
 |---|---|---|
 | Unit | **Vitest** | `UNIT-TRAVEL-DATES`, `UNIT-CONTACT-DETECTION`, `UNIT-MATE-STATE` |
 | Integration | **Vitest** | `TEST-RLS-BASIC`(RLS 권한별 부정 접근) |
-| E2E | **Playwright, Chromium 단일 브라우저만** | `E2E-PUBLIC-SMOKE`, `E2E-TRAVEL-TOOLS`, `E2E-MATE-AUTH` — 정확히 이 3개 Smoke Task만 존재한다 |
+| E2E | **Playwright, Chromium 단일 브라우저만** | `E2E-PUBLIC-SMOKE`(`tests/e2e/public-smoke.spec.ts`, E2E-001~005), `E2E-AUTH-SMOKE`(`tests/e2e/auth-smoke.spec.ts`, E2E-006~007 골격) — 정확히 이 2개 Smoke Task만 존재한다(DEC-018) |
 
-Firefox/WebKit 등 멀티 브라우저 매트릭스, 별도 회귀 스위트를 추가하지 않는다. Jest는 사용하지 않는다.
+Firefox/WebKit 등 멀티 브라우저 매트릭스, 별도 회귀 스위트를 추가하지 않는다. Jest는 사용하지 않는다. `E2E-AUTH-SMOKE`는 `E2E_TEST_EMAIL`/`E2E_TEST_PASSWORD`가 없으면 그 Task만 skip되고 `E2E-PUBLIC-SMOKE`는 계속 실행된다.
 
 ---
 

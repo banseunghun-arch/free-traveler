@@ -138,7 +138,7 @@ Rule 16: EXCLUDED는 구현 Task를 만들지 않되 추적표에서 삭제하�
   - Mobile 변형 승인됨 — Form 필드 세로 재배치.
 - **Visual AC**: 큰 빈 영역·Placeholder 문구 금지, 빈 Card 금지. 동행 탭 비로그인 상태는 완성형 안내(문장+방법+CTA)로 Empty가 아닌 Unauthorized 상태를 표시한다(REQ-FUNC-027/028). 세션 확인 중에는 Loading 상태(짧은 스켈레톤)를 표시한 뒤 Unauthorized 또는 작성 Form으로 전환한다.
 - **Security/Privacy AC**: 항공·숙소 입력값을 서버·DB·URL 쿼리 어디에도 전달/저장하지 않는다(REQ-FUNC-017, REQ-FUNC-025, REQ-NF-017). 동행 작성 제출 시 안전수칙 동의 여부와 동의 시각만 기록한다(REQ-FUNC-080).
-- **Verify**: Playwright(E2E-TRAVEL-TOOLS), Unit(UNIT-TRAVEL-DATES)
+- **Verify**: Playwright(E2E-PUBLIC-SMOKE), Unit(UNIT-TRAVEL-DATES)
 - **Priority**: P0
 
 ### Seq 4 — TASK-PAGE-SCR004
@@ -159,7 +159,7 @@ Rule 16: EXCLUDED는 구현 Task를 만들지 않되 추적표에서 삭제하�
   - 목록 결과 없음/필터 결과 없음 모두 완성형 Empty State(안내+필터 초기화+이용 방법 3단계+글쓰기 CTA).
 - **Visual AC**: 큰 빈 영역·Placeholder 문구·빈 Card 금지. Mobile은 별도 Screen 미승인이라 반응형(Drawer 전환)으로만 대응한다. 목록·상세 데이터 조회 중에는 Loading 상태(Skeleton Card)를 표시한다.
 - **Security/Privacy AC**: 연락처 정보를 응답 데이터에 포함하지 않는다(REQ-FUNC-033). 신청·신고·차단은 로그인 사용자만 가능(RLS로 서버 강제).
-- **Verify**: Playwright(E2E-MATE-AUTH), Unit(UNIT-MATE-STATE)
+- **Verify**: Playwright(E2E-AUTH-SMOKE), Unit(UNIT-MATE-STATE)
 - **Priority**: P0
 
 ### Seq 5 — TASK-PAGE-SCR005
@@ -180,7 +180,7 @@ Rule 16: EXCLUDED는 구현 Task를 만들지 않되 추적표에서 삭제하�
   - Member "내 글" 없음/참가 요청 없음/즐겨찾기 없음/차단 없음은 각각 완성형 Empty State.
 - **Visual AC**: 큰 빈 영역·Placeholder 문구·빈 Card 금지. Admin에 차트·KPI 그리드를 넣지 않는다(신고 큐+URL Form만). 역할 판별·데이터 조회 중에는 Loading 상태를 표시하고 완료 전까지 Guest Empty/Unauthorized로 오인되는 화면을 보여주지 않는다.
 - **Security/Privacy AC**: Guest는 Unauthorized가 기본 진입 상태. Member/Admin 데이터는 RLS로 본인/작성자/Admin만 접근(REQ-FUNC-044, REQ-NF-013). 외부 URL은 HTTPS만 허용하고 저장 전 검증한다(REQ-FUNC-077).
-- **Verify**: Playwright(E2E-MATE-AUTH), Integration(TEST-RLS-BASIC)
+- **Verify**: Playwright(E2E-AUTH-SMOKE), Integration(TEST-RLS-BASIC)
 - **Priority**: P0
 
 ---
@@ -309,24 +309,23 @@ Rule 16: EXCLUDED는 구현 Task를 만들지 않되 추적표에서 삭제하�
 |---|---|---|---|---|---|---|
 | 60 | TEST-RLS-BASIC | RLS 권한별 부정 접근 시도 통합 테스트 | REQ-FUNC-044, REQ-NF-013, REQ-NF-014, REQ-NF-015 | DB-RLS-BASE | `tests/rls/basic.test.ts` | P0 |
 
-## E2E(Playwright) Task — Chromium, 5~7개 흐름을 3개로 묶음 (Rule 14)
+## E2E(Playwright) Task — Chromium, tests/e2e에 2개 파일·7개 Test ID (Rule 14, DEC-018)
 
 | Seq | Task ID | 제목 | 커버 흐름 | Depends On | Expected Files | Priority |
 |---|---|---|---|---|---|---|
-| 61 | E2E-PUBLIC-SMOKE | 비로그인 공개 흐름 스모크(Chromium 단일) | 여행지 탐색→필터→상세→안전정보 / About 수치 확인 / 404 오류 복구 | TASK-PAGE-SCR001, TASK-PAGE-SCR002, COMP-GLOBAL-ERROR-PAGES | `e2e/public-smoke.spec.ts` | P0 |
-| 62 | E2E-TRAVEL-TOOLS | 항공·숙소 조건입력→검증→요약→외부이동 스모크(Chromium 단일) | 항공 흐름 / 호텔 흐름 / 비전달 고지 확인 | TASK-PAGE-SCR003 | `e2e/travel-tools.spec.ts` | P0 |
-| 63 | E2E-MATE-AUTH | 인증+동행+관리자 흐름 스모크(Chromium 단일) | 가입→로그인→성인확인→동행글작성(연락처차단)→게시 / 참가요청→승인거절 / 신고→접수 / 차단→노출제한 / 관리자 신고처리+URL설정 | TASK-PAGE-SCR004, TASK-PAGE-SCR005 | `e2e/mate-auth.spec.ts` | P0 |
+| 61 | E2E-PUBLIC-SMOKE | 비로그인 공개 흐름 스모크(Chromium 단일) | E2E-001 메인 추천여행지·주요 CTA / E2E-002 About free_traveler·50+·30개국 / E2E-003 항공 외부이동 안내·href / E2E-004 숙소 외부이동 안내·href / E2E-005 비로그인 동행 작성 로그인 안내 | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003 | `tests/e2e/public-smoke.spec.ts` | P0 |
+| 62 | E2E-AUTH-SMOKE | 로그인 사용자 동행글 작성·신청 스모크(Chromium 단일, 골격) | E2E-006 동행글 작성→목록·상세 확인 / E2E-007 참가 신청→계정 내 활동 확인 | TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005, AUTH-SUPABASE-EMAIL, API-MATE-POSTS, API-PARTICIPATION, DB-SEED-BASE | `tests/e2e/auth-smoke.spec.ts` | P0 |
 
-**Rule 13/14 준수**: 위 3개 Task 모두 **Chromium 단일 브라우저**만 사용한다. Firefox/WebKit 매트릭스, 브라우저별 별도 Task를 만들지 않는다.
+**Rule 13/14 준수**: 위 2개 Task 모두 **Chromium 단일 브라우저**(`devices["Desktop Chrome"]`)만 사용한다. Firefox/WebKit 매트릭스, 브라우저별 별도 Task를 만들지 않는다. `E2E-AUTH-SMOKE`는 `E2E_TEST_EMAIL`/`E2E_TEST_PASSWORD` 환경변수가 없으면 **이 Task만** 명시적으로 skip되고 `E2E-PUBLIC-SMOKE`는 계속 실행된다(`docs/DECISION_LOG.md` DEC-018).
 
 ## CI/Release/Manual Check Task (4개)
 
 | Seq | Task ID | 제목 | Requirement Ref | Depends On | Expected Files | Priority |
 |---|---|---|---|---|---|---|
-| 64 | CI-PIPELINE-BASE | TypeScript strict·lint·unit test CI 게이트 | REQ-NF-031, REQ-NF-032(축소) | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005 | `.github/workflows/ci.yml`(또는 Vercel 빌드 설정) | P0 |
-| 65 | RELEASE-CHECK-VERCEL-SUPABASE | Vercel 배포·Supabase 연결·환경변수·비용 확인(Manual/Release Check) | REQ-NF-005, REQ-NF-012, REQ-NF-016, REQ-NF-019, REQ-NF-034 | CI-PIPELINE-BASE, E2E-PUBLIC-SMOKE, E2E-TRAVEL-TOOLS, E2E-MATE-AUTH | `docs/RELEASE_CHECKLIST.md` | P0 |
-| 66 | MANUAL-A11Y-CHECK | 자동(axe)+키보드/스크린리더 수동 접근성 점검(Manual Check) | REQ-NF-023, REQ-NF-024, REQ-NF-025 | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005 | `tests/a11y/axe.spec.ts`, 수동 QA 체크리스트 | P1 |
-| 67 | MANUAL-PERFORMANCE-CHECK | Lighthouse 수동 성능 점검(Manual Check) | REQ-NF-001, REQ-NF-002, REQ-NF-003 | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005 | 수동 Lighthouse 리포트(문서화) | P1 |
+| 63 | CI-PIPELINE-BASE | TypeScript strict·lint·unit test CI 게이트 | REQ-NF-031, REQ-NF-032(축소) | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005 | `.github/workflows/ci.yml`(또는 Vercel 빌드 설정) | P0 |
+| 64 | RELEASE-CHECK-VERCEL-SUPABASE | Vercel 배포·Supabase 연결·환경변수·비용 확인(Manual/Release Check) | REQ-NF-005, REQ-NF-012, REQ-NF-016, REQ-NF-019, REQ-NF-034 | CI-PIPELINE-BASE, E2E-PUBLIC-SMOKE, E2E-AUTH-SMOKE | `docs/RELEASE_CHECKLIST.md` | P0 |
+| 65 | MANUAL-A11Y-CHECK | 자동(axe)+키보드/스크린리더 수동 접근성 점검(Manual Check) | REQ-NF-023, REQ-NF-024, REQ-NF-025 | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005 | `tests/a11y/axe.spec.ts`, 수동 QA 체크리스트 | P1 |
+| 66 | MANUAL-PERFORMANCE-CHECK | Lighthouse 수동 성능 점검(Manual Check) | REQ-NF-001, REQ-NF-002, REQ-NF-003 | TASK-PAGE-SCR001, TASK-PAGE-SCR002, TASK-PAGE-SCR003, TASK-PAGE-SCR004, TASK-PAGE-SCR005 | 수동 Lighthouse 리포트(문서화) | P1 |
 
 ---
 
@@ -334,7 +333,7 @@ Rule 16: EXCLUDED는 구현 Task를 만들지 않되 추적표에서 삭제하�
 
 | 항목 | 값 |
 |---|---:|
-| 전체 Task 수(Seq 1~67) | **67** |
+| 전체 Task 수(Seq 1~66) | **66** |
 | Page Owner | 5 |
 | Component(SCR-001~005 소계: 8+7+4+6+4) | 29 |
 | Global/Shared Component | 9 |
@@ -343,11 +342,13 @@ Rule 16: EXCLUDED는 구현 Task를 만들지 않되 추적표에서 삭제하�
 | Auth/API | 5 |
 | Unit Test | 3 |
 | Integration/RLS Test | 1 |
-| E2E | 3 |
+| E2E | 2 |
 | CI/Release/Manual | 4 |
-| **합계 검증**: 5+29+9+4+4+5+3+1+3+4 | **67** ✅ |
+| **합계 검증**: 5+29+9+4+4+5+3+1+2+4 | **66** ✅ |
 
-Requirement 커버리지 재확인: IMPLEMENT 92건이 위 67개 Task의 Requirement Ref 열에 최소 1회 이상 등장하며, EXCLUDED 22건은 상단 NON_IMPLEMENTATION 표에만 존재하고 어떤 Task에도 연결되지 않는다. **114/114 전수 반영, 빠진 Requirement ID 없음.**
+Requirement 커버리지 재확인: IMPLEMENT 92건이 위 66개 Task의 Requirement Ref 열에 최소 1회 이상 등장하며, EXCLUDED 22건은 상단 NON_IMPLEMENTATION 표에만 존재하고 어떤 Task에도 연결되지 않는다. **114/114 전수 반영, 빠진 Requirement ID 없음.**
+
+**E2E 개수 변경 이력(DEC-018)**: 이전에는 `E2E-PUBLIC-SMOKE`/`E2E-TRAVEL-TOOLS`/`E2E-MATE-AUTH` 3개 Task·9개 시나리오 구조였다. `playwright.config.ts`/`tests/e2e/*.spec.ts`를 실제로 작성하면서 `E2E-001~007` 7개 Test ID·2개 파일(`public-smoke.spec.ts`, `auth-smoke.spec.ts`) 구조로 재정리했고, 이 표는 그 결과를 반영한다. 옛 시나리오 중 404 오류화면 복구·신고/차단·관리자 URL 설정은 더 이상 이 2개 Task로 자동 검증되지 않는다(`docs/DECISION_LOG.md` DEC-018 참조).
 
 ---
 

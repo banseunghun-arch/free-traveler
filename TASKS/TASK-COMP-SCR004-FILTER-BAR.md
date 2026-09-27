@@ -66,7 +66,7 @@ Section 2. 국가·지역·기간·모집 상태 필터와 "총 N개의 모집�
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH).
+Playwright(E2E-AUTH-SMOKE).
 
 ## Definition of Done
 

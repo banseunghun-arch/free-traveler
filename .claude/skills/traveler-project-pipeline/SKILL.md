@@ -102,9 +102,10 @@ Screen·Route·Page Entry·Tier는 오직 `design-reference/SCREEN_ROUTE_CONTRAC
 
 ## 9. Playwright Chromium Smoke 범위
 
-- Playwright는 `PLAYWRIGHT_SCOPE=chromium-smoke` 범위를 지킨다: 정확히 `E2E-PUBLIC-SMOKE`, `E2E-TRAVEL-TOOLS`, `E2E-MATE-AUTH` 3개 Task만 존재한다(`docs/DECISION_LOG.md` DEC-009).
-- 세 Task 모두 Chromium 단일 브라우저만 사용한다. Firefox/WebKit 매트릭스, 화면별 개별 회귀 스위트, 추가 E2E 파일을 만들지 않는다.
-- `docs/PROJECT_SCOPE.md` 7절의 10개 시나리오는 이 3개 Task 안에서 영역별로 나누어 순차 수행한다.
+- Playwright는 `PLAYWRIGHT_SCOPE=chromium-smoke` 범위를 지킨다: 정확히 `E2E-PUBLIC-SMOKE`, `E2E-AUTH-SMOKE` 2개 Task, `tests/e2e/public-smoke.spec.ts`/`tests/e2e/auth-smoke.spec.ts` 2개 파일, `E2E-001`~`E2E-007` 7개 Test ID만 존재한다(`docs/DECISION_LOG.md` DEC-018 — DEC-009/DEC-016을 대체).
+- 두 Task 모두 Chromium 단일 브라우저(`devices["Desktop Chrome"]`)만 사용한다. Firefox/WebKit 매트릭스, 화면별 개별 회귀 스위트, 추가 E2E 파일을 만들지 않는다.
+- `E2E-AUTH-SMOKE`는 `E2E_TEST_EMAIL`/`E2E_TEST_PASSWORD` 환경변수가 없으면 이 Task만 명시적으로 skip한다 — `E2E-PUBLIC-SMOKE`는 항상 실행된다.
+- Selector는 role/label/test id 순으로 사용하고, 텍스트 위치·CSS 구조에 의존하지 않는다. 외부 사이트(항공/숙소/동행 대상)는 실제로 열어 그 내용을 검사하지 않으며, 버튼 클릭 후에는 안내 문구/Dialog와 `href`만 확인한다.
 
 ---
 

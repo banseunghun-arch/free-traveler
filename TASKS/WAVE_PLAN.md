@@ -4,9 +4,9 @@
 |---|---|
 | Document ID | WAVEPLAN-TRAVEL-001 |
 | 생성 도구 | `scripts/build_waves.py` (재실행 시 이 문서를 덮어쓴다) |
-| 생성 시각 | 2026-09-22T20:58:46Z |
+| 생성 시각 | 2026-09-22T21:51:51Z |
 | 총 Wave 수 | 17 |
-| 총 Task 수 | 67 |
+| 총 Task 수 | 66 |
 
 > Wave ID는 이 문서 생성 전에 미리 고정하지 않는다. `scripts/build_waves.py`가 실제로 산출한 Wave ID가 정본이며, `/run-wave`·`/prepare-task`·`TASKS/WAVE_STATE.json`은 이 문서를 그대로 따른다. Wave 안에서도 Task는 Task ID 알파벳 순으로 한 번에 하나씩 실행한다(CLAUDE.md 규칙 7).
 
@@ -30,8 +30,8 @@
 | W12 | SCR-003 Component와 Page Owner | 5 | COMP-SCR003-FLIGHT-FORM; COMP-SCR003-HOTEL-FORM; COMP-SCR003-INTRO-TABS; COMP-SCR003-MATE-COMPOSER; TASK-PAGE-SCR003 | 예 |
 | W13 | SCR-004 Component와 Page Owner | 7 | COMP-SCR004-APPLY-FLOW; COMP-SCR004-FILTER-BAR; COMP-SCR004-INTRO-CTA; COMP-SCR004-POST-DETAIL; COMP-SCR004-POST-LIST; COMP-SCR004-REPORT-BLOCK; TASK-PAGE-SCR004 | 예 |
 | W14 | SCR-005 Component와 Page Owner | 5 | COMP-SCR005-ADMIN; COMP-SCR005-AUTH; COMP-SCR005-MY-ACTIVITY; COMP-SCR005-PROFILE; TASK-PAGE-SCR005 | 예 |
-| W15 | Unit·Playwright·접근성·CI | 7 | CI-PIPELINE-BASE; E2E-MATE-AUTH; E2E-PUBLIC-SMOKE; E2E-TRAVEL-TOOLS; MANUAL-A11Y-CHECK; MANUAL-PERFORMANCE-CHECK; TEST-RLS-BASIC | 아니오 |
-| W16 | Unit·Playwright·접근성·CI | 3 | UNIT-CONTACT-DETECTION; UNIT-MATE-STATE; UNIT-TRAVEL-DATES | 아니오 |
+| W15 | Unit·Playwright·접근성·CI | 7 | CI-PIPELINE-BASE; E2E-AUTH-SMOKE; E2E-PUBLIC-SMOKE; MANUAL-A11Y-CHECK; MANUAL-PERFORMANCE-CHECK; TEST-RLS-BASIC; UNIT-CONTACT-DETECTION | 아니오 |
+| W16 | Unit·Playwright·접근성·CI | 2 | UNIT-MATE-STATE; UNIT-TRAVEL-DATES | 아니오 |
 | W17 | Vercel Preview와 Release 확인 | 1 | RELEASE-CHECK-VERCEL-SUPABASE | 예 |
 
 ---

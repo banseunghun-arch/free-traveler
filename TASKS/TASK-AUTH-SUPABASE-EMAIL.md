@@ -70,7 +70,7 @@ Supabase Auth 이메일 플로우 전체(가입/인증/로그인/로그아웃/�
 
 ## Verify
 
-E2E-MATE-AUTH, 통합 테스트.
+E2E-AUTH-SMOKE, 통합 테스트.
 
 ## Definition of Done
 

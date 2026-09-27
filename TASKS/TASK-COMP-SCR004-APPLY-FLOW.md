@@ -67,7 +67,7 @@ Section 5. 참가 신청 방법(조건 확인→비공개 메시지→작성자 
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH).
+Playwright(E2E-AUTH-SMOKE).
 
 ## Definition of Done
 

@@ -65,7 +65,7 @@ Section 4. 목록에서 선택한 동행글 상세를 Desktop은 좌우 분할, 
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH).
+Playwright(E2E-AUTH-SMOKE).
 
 ## Definition of Done
 

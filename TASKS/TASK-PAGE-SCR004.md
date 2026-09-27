@@ -87,12 +87,12 @@
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH), Unit(UNIT-MATE-STATE).
+Playwright(E2E-AUTH-SMOKE), Unit(UNIT-MATE-STATE).
 
 ## Definition of Done
 
 - 위 AC를 모두 만족한다.
-- E2E-MATE-AUTH의 동행 목록/신청/신고/차단 시나리오가 통과한다.
+- E2E-AUTH-SMOKE의 E2E-006(동행글 작성·목록·상세)/E2E-007(참가 신청) 시나리오가 통과한다.
 
 ## Forbidden
 

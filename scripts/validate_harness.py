@@ -216,6 +216,14 @@ def check_excluded_protection_rule() -> list[str]:
 
 
 def main() -> int:
+    # Force UTF-8 stdout so Korean console output survives on Windows, where
+    # sys.stdout otherwise defaults to the system locale codepage (e.g.
+    # cp949 on Korean Windows) and silently mis-encodes it.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     checks = Checks()
 
     checks.run(1, "CLAUDE.md 존재", check_claude_md_exists)

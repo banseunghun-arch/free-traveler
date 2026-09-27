@@ -1,6 +1,6 @@
 {
   "schema_version": "traveler-wave-state-v1",
-  "generated_at": "2026-09-22T20:58:46Z",
+  "generated_at": "2026-09-22T21:51:51Z",
   "waves": [
     {
       "wave_id": "W01",
@@ -8,15 +8,15 @@
       "task_ids": [
         "COMP-GLOBAL-DESIGN-TOKENS"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "COMP-GLOBAL-DESIGN-TOKENS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/app/globals.css only (Tailwind v4 CSS-first @theme) — tailwind.config.ts intentionally not created, see report"
         }
       ]
     },
@@ -32,51 +32,51 @@
         "COMP-GLOBAL-RESPONSIVE-LAYOUT",
         "COMP-GLOBAL-SEO-META"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "COMP-GLOBAL-A11Y",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/lib/a11y.ts + Button/DialogBase/FormField/TabGroup shared components with ARIA/keyboard"
         },
         {
           "task_id": "COMP-GLOBAL-EMPTY-STATE-BLOCK",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "EmptyState.tsx with dev-mode empty-check warnings"
         },
         {
           "task_id": "COMP-GLOBAL-ERROR-PAGES",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "not-found/error/global-error.tsx with home/retry actions"
         },
         {
           "task_id": "COMP-GLOBAL-FAVORITES",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "localStorage-based favorites with SSR safety"
         },
         {
           "task_id": "COMP-GLOBAL-HEADER-FOOTER",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "Header/Footer with nav links and policy footers"
         },
         {
           "task_id": "COMP-GLOBAL-RESPONSIVE-LAYOUT",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "ResponsiveGrid/ResponsiveImage + next.config image formats"
         },
         {
           "task_id": "COMP-GLOBAL-SEO-META",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "layout.tsx + 5 page.tsx with metadata/og tags"
         }
       ]
     },
@@ -90,39 +90,39 @@
         "DATA-SAFETY",
         "DATA-VALIDATION-SCRIPT"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "COMP-GLOBAL-TOAST",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/shared/Toast.tsx with success/error/info types, auto-dismiss, ARIA attributes"
         },
         {
           "task_id": "DATA-DESTINATIONS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/data/destinations.ts with 10 domestic + 30 international (15 countries)"
         },
         {
           "task_id": "DATA-REPRESENTATIVE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/data/representative.ts with 50 trips, 30 countries, 15 years profile"
         },
         {
           "task_id": "DATA-SAFETY",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/data/safety.ts with 8 country safety profiles (security/disaster/health categories)"
         },
         {
           "task_id": "DATA-VALIDATION-SCRIPT",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "scripts/validate_content_data.mjs validates destinations/safety/representative data completeness"
         }
       ]
     },
@@ -132,15 +132,15 @@
       "task_ids": [
         "DB-SCHEMA-BASE"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "DB-SCHEMA-BASE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "supabase/migrations/0001_schema.sql with 6 tables: profiles, mate_posts, participation_requests, blocks, reports, external_urls"
         }
       ]
     },
@@ -150,15 +150,15 @@
       "task_ids": [
         "DB-RLS-BASE"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "DB-RLS-BASE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "supabase/migrations/0002_rls.sql with RLS policies: profiles (self), mate_posts (author), participation_requests (author/requester), blocks (owner), reports (reporter/admin), external_urls (admin-only)"
         }
       ]
     },
@@ -169,21 +169,21 @@
         "AUTH-SUPABASE-EMAIL",
         "DB-ACCESS"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "AUTH-SUPABASE-EMAIL",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/lib/auth.ts with signup/login/logout/reset password and /auth/callback route for email confirmation"
         },
         {
           "task_id": "DB-ACCESS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/lib/db.ts with typed ClientDB/ServerDB classes and src/lib/supabase-client.ts with browser/server client factories"
         }
       ]
     },
@@ -197,39 +197,39 @@
         "API-PARTICIPATION",
         "DB-SEED-BASE"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "API-ADMIN-URLS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/app/api/admin/urls/route.ts with GET/POST/PUT endpoints for managing external URLs (HTTPS validation)"
         },
         {
           "task_id": "API-BLOCK-REPORT",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/app/api/moderation/route.ts with report submission, block/unblock, and admin queue management"
         },
         {
           "task_id": "API-MATE-POSTS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/lib/contact-detection.ts + src/app/api/mates/route.ts + src/app/api/mates/[id]/route.ts with contact detection, date validation, and auto-closing"
         },
         {
           "task_id": "API-PARTICIPATION",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/app/api/participation/route.ts with POST (submit), GET (list), PATCH (approve/reject) endpoints with duplicate prevention"
         },
         {
           "task_id": "DB-SEED-BASE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "supabase/seed.sql with test accounts (regular/author/admin), sample posts, participation requests, blocks, reports, external URLs"
         }
       ]
     },
@@ -241,27 +241,27 @@
         "COMP-SCR001-DEST-DETAIL-DRAWER",
         "COMP-SCR001-DOMESTIC-GRID"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "COMP-SCR001-ABOUT-SUMMARY",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/AboutSummaryBlock.tsx with left-right split layout showing profile stats and bio"
         },
         {
           "task_id": "COMP-SCR001-DEST-DETAIL-DRAWER",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/DestinationDrawer.tsx with detail view, safety info transition, and up to 6 recommendations"
         },
         {
           "task_id": "COMP-SCR001-DOMESTIC-GRID",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/DestinationGrid.tsx with 6-card responsive grid, favorites integration, and detail drawer link"
         }
       ]
     },
@@ -276,45 +276,45 @@
         "COMP-SCR001-THEME-CHIPS",
         "TASK-PAGE-SCR001"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": true,
-      "checkpoint_result": null,
+      "checkpoint_result": "CONFIRMED",
       "tasks": [
         {
           "task_id": "COMP-SCR001-INTL-GRID",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/DestinationGrid.tsx (variant=international) reuses domestic grid component"
         },
         {
           "task_id": "COMP-SCR001-MATE-PREVIEW",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/MatePreview.tsx with 3-card recent posts preview and /mates link"
         },
         {
           "task_id": "COMP-SCR001-SAFETY-GRID",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/SafetyGrid.tsx with 6 country safety info cards showing level badges"
         },
         {
           "task_id": "COMP-SCR001-SEARCH-HERO",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/SearchHero.tsx with keyword search, season/date filters, and /travel-tools CTA"
         },
         {
           "task_id": "COMP-SCR001-THEME-CHIPS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr001/ThemeChips.tsx with 6 travel motivation chip buttons"
         },
         {
           "task_id": "TASK-PAGE-SCR001",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/app/page.tsx with 7 sections: search hero, domestic grid, intl grid, themes, safety, mate preview, about summary"
         }
       ]
     },
@@ -330,51 +330,51 @@
         "COMP-SCR002-TRAVEL-STATS",
         "COMP-SCR002-VISITED-COUNTRIES"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "COMP-SCR002-GALLERY",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/PhotoGallery.tsx with 8+ images and alt text"
         },
         {
           "task_id": "COMP-SCR002-INTRO-PHILOSOPHY",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/IntroPhilosophy.tsx with travel philosophy and values"
         },
         {
           "task_id": "COMP-SCR002-PROFILE-HERO",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/ProfileHero.tsx with hero section and stats"
         },
         {
           "task_id": "COMP-SCR002-RECOMMENDED-DEST",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/RecommendedDest.tsx with 6 recommended destinations"
         },
         {
           "task_id": "COMP-SCR002-TIMELINE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/Timeline.tsx with 6 travel milestones"
         },
         {
           "task_id": "COMP-SCR002-TRAVEL-STATS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/TravelStats.tsx with trip/country/year stats"
         },
         {
           "task_id": "COMP-SCR002-VISITED-COUNTRIES",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T00:00:00Z",
+          "note": "src/components/scr002/VisitedCountries.tsx with 30+ countries by region"
         }
       ]
     },
@@ -384,15 +384,15 @@
       "task_ids": [
         "TASK-PAGE-SCR002"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": true,
-      "checkpoint_result": null,
+      "checkpoint_result": "CONFIRMED",
       "tasks": [
         {
           "task_id": "TASK-PAGE-SCR002",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-24T10:57:00Z",
+          "note": "src/app/about/page.tsx with 7 sections: hero, stats, intro, timeline, countries, gallery, recommended. All AC passed."
         }
       ]
     },
@@ -406,39 +406,39 @@
         "COMP-SCR003-MATE-COMPOSER",
         "TASK-PAGE-SCR003"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": true,
-      "checkpoint_result": null,
+      "checkpoint_result": "CONFIRMED",
       "tasks": [
         {
           "task_id": "COMP-SCR003-FLIGHT-FORM",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T10:00:00Z",
+          "note": "src/components/scr003/FlightForm.tsx with country/region/dates input, validation, summary, external link, error handling, 3 tips"
         },
         {
           "task_id": "COMP-SCR003-HOTEL-FORM",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T10:05:00Z",
+          "note": "src/components/scr003/HotelForm.tsx with same pattern as FlightForm but for hotel search"
         },
         {
           "task_id": "COMP-SCR003-INTRO-TABS",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T14:30:00Z",
+          "note": "src/components/scr003/IntroTabs.tsx with 3-step intro, 3 tabs (flight/hotel/mate search), independent state management, underline-style tabs"
         },
         {
           "task_id": "COMP-SCR003-MATE-COMPOSER",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T14:45:00Z",
+          "note": "src/components/scr003/MateComposer.tsx with auth checking, contact detection, form validation, safety agreement, and unauthorized/adult-verification states"
         },
         {
           "task_id": "TASK-PAGE-SCR003",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:00:00Z",
+          "note": "src/app/travel-tools/page.tsx with real component assembly: IntroTabs + FlightForm/HotelForm/MateComposer in tab slots, server component"
         }
       ]
     },
@@ -454,51 +454,51 @@
         "COMP-SCR004-REPORT-BLOCK",
         "TASK-PAGE-SCR004"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": true,
-      "checkpoint_result": null,
+      "checkpoint_result": "CONFIRMED",
       "tasks": [
         {
           "task_id": "COMP-SCR004-APPLY-FLOW",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:00:00Z",
+          "note": "src/components/scr004/ApplyFlow.tsx with 3-step guide, 500-char message form, duplicate request blocking, real-time char counter"
         },
         {
           "task_id": "COMP-SCR004-FILTER-BAR",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:10:00Z",
+          "note": "src/components/scr004/FilterBar.tsx with country/region/date/status filtering, blocked user exclusion, result count"
         },
         {
           "task_id": "COMP-SCR004-INTRO-CTA",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:15:00Z",
+          "note": "src/components/scr004/IntroCta.tsx with auth-aware routing"
         },
         {
           "task_id": "COMP-SCR004-POST-DETAIL",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:18:00Z",
+          "note": "src/components/scr004/PostDetail.tsx with Desktop/Mobile layout support"
         },
         {
           "task_id": "COMP-SCR004-POST-LIST",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:20:00Z",
+          "note": "src/components/scr004/PostList.tsx with pagination and auto-close detection"
         },
         {
           "task_id": "COMP-SCR004-REPORT-BLOCK",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:25:00Z",
+          "note": "src/components/scr004/ReportBlockPanel.tsx with report form and block toggle"
         },
         {
           "task_id": "TASK-PAGE-SCR004",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T15:30:00Z",
+          "note": "src/app/mates/page.tsx + page-client.tsx with full page assembly: intro→filter→list/detail→apply→report"
         }
       ]
     },
@@ -512,33 +512,33 @@
         "COMP-SCR005-PROFILE",
         "TASK-PAGE-SCR005"
       ],
-      "status": "pending",
+      "status": "in_progress",
       "checkpoint_required": true,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "COMP-SCR005-ADMIN",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T10:45:00Z",
+          "note": "src/components/scr005/AdminPanel.tsx with report queue filtering and external URL settings"
         },
         {
           "task_id": "COMP-SCR005-AUTH",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T10:50:00Z",
+          "note": "src/components/scr005/AuthPanel.tsx with signup/login/password-reset forms and feature guide"
         },
         {
           "task_id": "COMP-SCR005-MY-ACTIVITY",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T10:55:00Z",
+          "note": "src/components/scr005/MyActivity.tsx with posts/requests/favorites/blocked management"
         },
         {
           "task_id": "COMP-SCR005-PROFILE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T11:00:00Z",
+          "note": "src/components/scr005/ProfileSummary.tsx with profile fields and adult verification status"
         },
         {
           "task_id": "TASK-PAGE-SCR005",
@@ -553,12 +553,12 @@
       "title": "Unit·Playwright·접근성·CI",
       "task_ids": [
         "CI-PIPELINE-BASE",
-        "E2E-MATE-AUTH",
+        "E2E-AUTH-SMOKE",
         "E2E-PUBLIC-SMOKE",
-        "E2E-TRAVEL-TOOLS",
         "MANUAL-A11Y-CHECK",
         "MANUAL-PERFORMANCE-CHECK",
-        "TEST-RLS-BASIC"
+        "TEST-RLS-BASIC",
+        "UNIT-CONTACT-DETECTION"
       ],
       "status": "pending",
       "checkpoint_required": false,
@@ -571,19 +571,13 @@
           "note": ""
         },
         {
-          "task_id": "E2E-MATE-AUTH",
+          "task_id": "E2E-AUTH-SMOKE",
           "status": "READY",
           "updated_at": null,
           "note": ""
         },
         {
           "task_id": "E2E-PUBLIC-SMOKE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
-        },
-        {
-          "task_id": "E2E-TRAVEL-TOOLS",
           "status": "READY",
           "updated_at": null,
           "note": ""
@@ -605,6 +599,12 @@
           "status": "READY",
           "updated_at": null,
           "note": ""
+        },
+        {
+          "task_id": "UNIT-CONTACT-DETECTION",
+          "status": "READY",
+          "updated_at": null,
+          "note": ""
         }
       ]
     },
@@ -612,7 +612,6 @@
       "wave_id": "W16",
       "title": "Unit·Playwright·접근성·CI",
       "task_ids": [
-        "UNIT-CONTACT-DETECTION",
         "UNIT-MATE-STATE",
         "UNIT-TRAVEL-DATES"
       ],
@@ -620,12 +619,6 @@
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
-        {
-          "task_id": "UNIT-CONTACT-DETECTION",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
-        },
         {
           "task_id": "UNIT-MATE-STATE",
           "status": "READY",

@@ -1,26 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
+/*
+ * Design tokens — design-reference/D-001/DESIGN.md §2~§6 (LOCKED, single source of truth).
+ * Do not add a color/radius/shadow value that isn't defined there; register it in
+ * DESIGN.md first (version bump) before using it here.
+ */
+@theme {
+  /* §2 Color Token */
+  --color-canvas: #ffffff;
+  --color-canvas-soft: #f7f6f4;
+  --color-ink: #262626;
+  --color-body: #4b4b4b;
+  --color-muted: #767676;
+  --color-hairline: #e5e3e0;
+  --color-coral: #d03e1b;
+  --color-coral-active: #b23417;
+  --color-coral-bright: #ff6b4a;
+  --color-coral-tint: #ffe8e0;
+  --color-coral-disabled: #ffd3c2;
+  --color-danger: #d7263d;
+  --color-warning-text: #b45309;
+  --color-warning-bg: #fff4e0;
+  --color-success-text: #1a7f5a;
+  --color-success-bg: #e6f6ef;
+  --color-info-link: #2563eb;
+  --color-focus-ring: #1d4ed8;
+
+  /* §3 Typography — Inter + 한글 시스템 폰트 폴백 */
+  --font-sans:
+    "Inter", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
+    sans-serif;
+
+  /*
+   * type.* 크기/행간 토큰. 굵기는 --text-*--font-weight 페어링에 기대지 않고
+   * 사용처에서 Tailwind 기본 font-weight 유틸리티를 함께 적용한다:
+   *   display-xl/display-lg → font-bold(700)
+   *   display-md/title/button/micro → font-semibold(600)
+   *   body/body-sm → font-normal(400)
+   */
+  --text-display-xl: 32px;
+  --text-display-xl--line-height: 40px;
+  --text-display-lg: 26px;
+  --text-display-lg--line-height: 34px;
+  --text-display-md: 22px;
+  --text-display-md--line-height: 30px;
+  --text-title: 18px;
+  --text-title--line-height: 26px;
+  --text-body: 16px;
+  --text-body--line-height: 24px;
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-button: 16px;
+  --text-button--line-height: 24px;
+  --text-micro: 12px;
+  --text-micro--line-height: 16px;
+
+  /* §4 Spacing — 4/8/12/16/24/32px 스케일의 이름 있는 별칭 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+
+  /* §5 Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* §6 Shadow — 단일 Shadow Tier만 사용(2단계 이상 Elevation 금지) */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* §4 Spacing — Section 상하 여백은 고정값이 아니라 범위(반응형 판단은 개별 Page/Component Task 몫) */
+  --space-section-desktop-min: 64px;
+  --space-section-desktop-max: 96px;
+  --space-section-mobile-min: 40px;
+  --space-section-mobile-max: 64px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }

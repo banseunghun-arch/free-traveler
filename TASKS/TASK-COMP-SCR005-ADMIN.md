@@ -71,7 +71,7 @@ Admin 역할 전용 블록. OPEN/REVIEWING/RESOLVED/DISMISSED 상태별 신고 �
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH), Integration(TEST-RLS-BASIC).
+Playwright(E2E-AUTH-SMOKE), Integration(TEST-RLS-BASIC).
 
 ## Definition of Done
 

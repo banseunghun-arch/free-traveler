@@ -566,6 +566,14 @@ def rewrite_manifest_with_wave_id(raw_rows: list[dict], tasks: dict, plan: list[
 # --- main ------------------------------------------------------------------
 
 def main() -> int:
+    # Force UTF-8 stdout so Korean console output survives on Windows, where
+    # sys.stdout otherwise defaults to the system locale codepage (e.g.
+    # cp949 on Korean Windows) and silently mis-encodes it.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     try:
         tasks, raw_rows = load_manifest()
         cross_check_detail_files(tasks)

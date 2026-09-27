@@ -66,7 +66,7 @@ Guest 역할 전용 블록. 계정 기능 Intro → 로그인/가입/비밀번�
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH).
+Playwright(E2E-AUTH-SMOKE).
 
 ## Definition of Done
 

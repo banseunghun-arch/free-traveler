@@ -26,7 +26,7 @@ Implements **exactly one** Task. If asked to implement several Tasks at once, re
 ## 3. Verify
 
 9. Run the Unit Test(s) this Task's `Verify`/`Test Cases` reference (Vitest). If a referenced test file doesn't exist yet because its owning Task hasn't run, say so plainly — do not report an untested claim as passing.
-10. Run the Playwright Chromium Smoke Task **only if** this Task is a Page Owner Task or is itself one of the 3 named E2E tasks (`E2E-PUBLIC-SMOKE` / `E2E-TRAVEL-TOOLS` / `E2E-MATE-AUTH`). For any other Task type (Component, Data, DB, Auth/API, non-E2E test, CI/manual), do not run Playwright.
+10. Run the Playwright Chromium Smoke Task **only if** this Task is a Page Owner Task or is itself one of the 2 named E2E tasks (`E2E-PUBLIC-SMOKE` / `E2E-AUTH-SMOKE`, `tests/e2e/*.spec.ts`, DEC-018). For any other Task type (Component, Data, DB, Auth/API, non-E2E test, CI/manual), do not run Playwright.
 11. Review `git status` / `git diff` before reporting: confirm every changed path is inside this Task's Expected Files and nothing else was touched.
 
 ## 4. Report (always, regardless of outcome)

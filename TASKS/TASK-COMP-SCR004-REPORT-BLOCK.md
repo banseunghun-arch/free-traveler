@@ -69,7 +69,7 @@ Section 6. 신고·차단 트리거 버튼과 안전 안내 CTA Banner("여행 �
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH).
+Playwright(E2E-AUTH-SMOKE).
 
 ## Definition of Done
 

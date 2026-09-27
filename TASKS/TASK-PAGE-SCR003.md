@@ -84,12 +84,12 @@
 
 ## Verify
 
-Playwright(E2E-TRAVEL-TOOLS), Unit(UNIT-TRAVEL-DATES).
+Playwright(E2E-PUBLIC-SMOKE), Unit(UNIT-TRAVEL-DATES).
 
 ## Definition of Done
 
 - 위 AC를 모두 만족한다.
-- E2E-TRAVEL-TOOLS 전체 시나리오가 통과한다.
+- E2E-PUBLIC-SMOKE의 E2E-003/E2E-004/E2E-005 시나리오가 통과한다.
 - Depends On의 Component Task가 모두 완료되어 있다.
 
 ## Forbidden

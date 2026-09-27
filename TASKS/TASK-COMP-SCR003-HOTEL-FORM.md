@@ -79,7 +79,7 @@
 
 ## Verify
 
-Playwright(E2E-TRAVEL-TOOLS), Unit(UNIT-TRAVEL-DATES).
+Playwright(E2E-PUBLIC-SMOKE), Unit(UNIT-TRAVEL-DATES).
 
 ## Definition of Done
 

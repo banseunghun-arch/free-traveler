@@ -5,7 +5,7 @@
 | Document ID | DECLOG-TRAVEL-001 |
 | 기준 문서 | `docs/ARCHITECTURE.md`, `docs/PROJECT_SCOPE.md`, `docs/UIUX_TRACEABILITY.md`, `design-reference/DESIGN_MANIFEST.md`, `design-reference/SCREEN_ROUTE_CONTRACT.json`, `.claude/skills/traveler-project-pipeline/SKILL.md`, `TASKS/00_TASK_LIST.md`, `scripts/audit_tasks.py` |
 | 작성일 | 2026-09-23 |
-| 상태 | 전 항목 CONFIRMED |
+| 상태 | DEC-009·DEC-016은 DEC-018로 SUPERSEDED, 그 외 전 항목 CONFIRMED |
 
 > 이 문서는 프로젝트 진행 중 확정된 결정을 번호를 매겨 기록한다. 이후 결정을 뒤집으려면 새 DEC 항목을 추가하고 이전 항목의 상태를 SUPERSEDED로 표시하며, 기존 항목을 삭제하지 않는다.
 
@@ -79,7 +79,7 @@
 - **배경**: 멀티 브라우저 매트릭스나 화면별 세분화된 회귀 스위트는 이번 단계의 검증 목표(핵심 흐름 동작 확인) 대비 유지비용이 과하다.
 - **근거 문서**: `.claude/skills/traveler-project-pipeline/SKILL.md` Rule 13(원 규칙은 "정확히 1개"였으나, 이후 `docs/PROJECT_SCOPE.md` 7절의 10개 시나리오를 3개 영역으로 나눈 명시적 Task 목록 요청으로 이 3개 Task 구성으로 갱신됨), `docs/ARCHITECTURE.md` 12절, `scripts/audit_tasks.py` Check 15.
 - **영향**: Firefox/WebKit 프로젝트, 화면별 개별 E2E 파일을 추가하지 않는다.
-- **상태**: CONFIRMED
+- **상태**: SUPERSEDED by DEC-018 (Task ID·파일 구성이 바뀌었으나 "Chromium 단일 브라우저만 사용"이라는 원칙 자체는 DEC-018에도 그대로 남아 있다)
 
 ## DEC-010 — 사용자의 개발 실행 단위는 Wave
 
@@ -135,7 +135,7 @@
 - **배경**: DEC-009는 Task **파일** 개수를 정확히 3개로 고정한 결정이며, 화면별/시나리오별로 Task 파일을 잘게 쪼개는 것은 유지비용 대비 이득이 없다는 근거로 이미 확정되어 있다. 새 요청의 "5~7개"를 Task 파일 개수로 해석해 DEC-009를 뒤집을 만한 새로운 근거(예: 시나리오 자체가 누락됨)는 발견되지 않았다.
 - **근거 문서**: `docs/DECISION_LOG.md` DEC-009, `TASKS/TASK-E2E-PUBLIC-SMOKE.md`/`TASK-E2E-TRAVEL-TOOLS.md`/`TASK-E2E-MATE-AUTH.md`(Functional AC의 개별 시나리오 목록), `docs/PROJECT_SCOPE.md` 7절.
 - **영향**: Playwright Task 파일 개수(3개)는 그대로 유지한다. 시나리오를 추가로 쪼개 Task 파일을 5~7개로 늘리는 작업은 하지 않는다.
-- **상태**: CONFIRMED
+- **상태**: SUPERSEDED by DEC-018 (실제로 `playwright.config.ts`/`tests/e2e/*.spec.ts`를 작성하면서 3개 Task·9개 시나리오가 아니라 2개 Task·7개 Test ID 구조로 다시 정리됨)
 
 ## DEC-017 — Wave 분할·`WAVE_PLAN.md`/`WAVE_STATE.json`은 `scripts/build_waves.py`가 생성
 
@@ -143,6 +143,15 @@
 - **배경**: DEC-010/DEC-011이 확정한 "Wave 단위 실행·Wave 내부 순차 수행"을 실제로 기계적으로 산출하려면, 67개 Task의 실제 `Depends On` 그래프를 읽어 자동으로 나누는 도구가 필요했다. 특히 Task ID 알파벳 순 실행 규칙(CLAUDE.md 규칙 7)과 의존성 순서가 항상 일치하지 않는 실제 사례(`DB-RLS-BASE`가 `DB-SCHEMA-BASE`에 의존하지만 ID는 더 앞섬 등)가 다수 발견되어, 수작업 Wave 분할표는 오류 위험이 컸다.
 - **근거 문서**: `scripts/build_waves.py`, `TASKS/TASK_DAG.md`, `TASKS/WAVE_PLAN.md`, `TASKS/WAVE_STATE.json`, `.claude/commands/run-wave.md`(Wave 자료 절).
 - **영향**: 이후 Task 구성이 바뀌면(`00_TASK_LIST.md`/상세 파일 수정 후 `/audit-tasks`) `scripts/build_waves.py`를 다시 실행해 Wave 구성을 재생성한다. `TASKS/WAVE_PLAN.md`를 직접 손으로 고치지 않는다.
+- **상태**: CONFIRMED
+
+## DEC-018 — Playwright E2E는 `tests/e2e/`의 2개 파일·7개 Test ID(E2E-001~007) 구조로 재정리
+
+- **결정**: `playwright.config.ts`와 `tests/e2e/public-smoke.spec.ts`/`tests/e2e/auth-smoke.spec.ts`를 실제로 작성하면서, Playwright E2E Task 구성을 DEC-009/DEC-016이 확정했던 `E2E-PUBLIC-SMOKE`/`E2E-TRAVEL-TOOLS`/`E2E-MATE-AUTH` 3개 Task·`e2e/` 폴더·9개 시나리오 구조에서, **`E2E-PUBLIC-SMOKE`(비로그인 공개 흐름, E2E-001~005) + `E2E-AUTH-SMOKE`(로그인 흐름 골격, E2E-006~007)** 2개 Task·`tests/e2e/` 폴더·7개 Test ID 구조로 변경한다. 옛 `E2E-TRAVEL-TOOLS`는 `E2E-PUBLIC-SMOKE`에 합쳐졌고, 옛 `E2E-MATE-AUTH`는 `E2E-AUTH-SMOKE`로 이름이 바뀌었다.
+- **배경**: 실제 테스트 코드를 작성하는 단계에서 사용자가 Test ID·파일 배치·Selector 규칙(role/label/test id 우선, 외부 사이트 내용 미검사)을 구체적으로 지정했고, 이 요청이 이전 DEC-009/DEC-016보다 더 구체적이고 최신이므로 이를 정본으로 삼는다.
+- **범위 축소(솔직히 기록)**: 옛 9개 시나리오 중 `#9`(404/외부 연결 실패 오류 화면 복구), `#6`(신고→접수, 차단→노출 제한), `#7`(관리자 신고 처리·외부 URL 설정)은 새 7개 Test ID(E2E-001~007)에 대응 항목이 없다 — 즉 이 3개 흐름은 더 이상 자동화된 Playwright Smoke로 검증되지 않는다. 필요해지면 별도 Task로 다시 추가하는 것으로 하고, 지금은 조용히 덮지 않고 이 기록에 남긴다.
+- **근거 문서**: `playwright.config.ts`, `tests/e2e/public-smoke.spec.ts`, `tests/e2e/auth-smoke.spec.ts`, `TASKS/TASK-E2E-PUBLIC-SMOKE.md`, `TASKS/TASK-E2E-AUTH-SMOKE.md`, `scripts/audit_tasks.py`(`REQUIRED_E2E_IDS`), `scripts/validate_waves.py` Check 6.
+- **영향**: `TASKS/00_TASK_LIST.md`의 E2E Task는 이제 2개(Seq 61~62)이고, 전체 Task 수는 67 → **66**으로 줄었다. `TASKS/TASK-E2E-TRAVEL-TOOLS.md`/`TASKS/TASK-E2E-MATE-AUTH.md` 파일은 삭제했다. `scripts/build_waves.py`를 다시 실행해 `TASKS/TASK_MANIFEST.csv`·`TASK_DAG.md`·`WAVE_PLAN.md`·`WAVE_STATE.json`을 이 구조로 재생성한다.
 - **상태**: CONFIRMED
 
 ## 요약 표
@@ -157,12 +166,13 @@
 | DEC-006 | DB 6개 Table 제한 |
 | DEC-007 | 항공·숙소 입력 = Browser Memory만 |
 | DEC-008 | Airbnb `DESIGN.md` = vendor 참고본, D-001 = 정본 |
-| DEC-009 | Playwright = Chromium Smoke 3개 Task만 |
+| DEC-009 | ~~Playwright = Chromium Smoke 3개 Task만~~ → DEC-018로 대체 |
 | DEC-010 | 실행 단위 = Wave |
 | DEC-011 | Wave 내부 = Single Agent 순차 수행 |
 | DEC-012 | PR·Merge = 사용자 수동 |
 | DEC-013 | EC2·AWS 미사용 |
 | DEC-014 | 제외 기능 = EXCLUDED로 추적 유지 |
 | DEC-015 | DB 6개 Table 명칭은 기존 정의(participation_requests·external_urls) 유지 |
-| DEC-016 | Playwright "5~7개 핵심 흐름" = 기존 3개 Task·9개 시나리오로 충족 |
+| DEC-016 | ~~Playwright "5~7개 핵심 흐름" = 기존 3개 Task·9개 시나리오로 충족~~ → DEC-018로 대체 |
 | DEC-017 | Wave 분할은 `scripts/build_waves.py`가 자동 생성(수작업 금지) |
+| DEC-018 | Playwright E2E = `tests/e2e/` 2개 Task·7개 Test ID(E2E-001~007) |

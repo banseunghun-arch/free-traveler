@@ -1,0 +1,13 @@
+# Requirement / Task / Wave documents are intentionally excluded from
+# Prettier (npm run format:check only targets src/, tests/, root config
+# files, and .github/workflows/ — see package.json).
+docs/
+TASKS/
+design-reference/
+
+node_modules/
+.next/
+out/
+build/
+coverage/
+package-lock.json

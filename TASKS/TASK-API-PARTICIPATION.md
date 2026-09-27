@@ -69,7 +69,7 @@
 
 ## Verify
 
-E2E-MATE-AUTH, 통합 테스트.
+E2E-AUTH-SMOKE, 통합 테스트.
 
 ## Definition of Done
 

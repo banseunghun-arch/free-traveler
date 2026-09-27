@@ -65,7 +65,7 @@ Intro(이용 순서 3단계 요약)와 "항공편 찾기/숙소 찾기/동행 �
 
 ## Verify
 
-Playwright(E2E-TRAVEL-TOOLS).
+Playwright(E2E-PUBLIC-SMOKE).
 
 ## Definition of Done
 

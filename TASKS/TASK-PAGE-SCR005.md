@@ -90,7 +90,7 @@
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH), Integration(TEST-RLS-BASIC).
+Playwright(E2E-AUTH-SMOKE), Integration(TEST-RLS-BASIC).
 
 ## Definition of Done
 

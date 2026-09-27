@@ -65,7 +65,7 @@ Section 3. 동행글 목록을 최대 8개 우선 노출하고 "더 보기" 페�
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH), Unit(UNIT-MATE-STATE).
+Playwright(E2E-AUTH-SMOKE), Unit(UNIT-MATE-STATE).
 
 ## Definition of Done
 

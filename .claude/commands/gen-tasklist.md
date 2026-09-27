@@ -15,7 +15,7 @@ description: Generate or refresh TASKS/00_TASK_LIST.md for the Traveler implemen
    - Data tasks for destinations, country safety, and representative content as **static `src/data/**` TypeScript**, never DB tasks (§6).
    - DB tasks covering only the 6 tables named in §6 — never a 7th table.
    - Auth/API tasks scoped to Auth, mate posts, participation, block/report, external URL settings (§8) — never a Route Handler that persists flight/hotel search input (§7).
-   - Test tasks: Unit (`UNIT-TRAVEL-DATES`, `UNIT-CONTACT-DETECTION`, `UNIT-MATE-STATE`), Integration (`TEST-RLS-BASIC`), and exactly the 3 named Chromium-only E2E tasks (`E2E-PUBLIC-SMOKE`, `E2E-TRAVEL-TOOLS`, `E2E-MATE-AUTH`) per §9 — never more, never a multi-browser matrix.
+   - Test tasks: Unit (`UNIT-TRAVEL-DATES`, `UNIT-CONTACT-DETECTION`, `UNIT-MATE-STATE`), Integration (`TEST-RLS-BASIC`), and exactly the 2 named Chromium-only E2E tasks (`E2E-PUBLIC-SMOKE`, `E2E-AUTH-SMOKE`) per §9/DEC-018 — never more, never a multi-browser matrix.
    - CI/Release/Manual tasks (lint/build/test gate, release checklist, a11y check, performance check).
    - Never an EC2/AWS/auto-merge task (§12).
 7. For every task, set `Depends On` per §5 (a Page Owner depends on every Component task sharing its screen tag, plus any global Component/Data/API tasks it uses).

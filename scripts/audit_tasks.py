@@ -52,7 +52,7 @@ DB_TABLE_EXTRA_TOLERANCE = 1
 FORBIDDEN_TABLE_HINTS = ["audit_log", "AUDIT_LOG", "favorites 테이블", "favorites table"]
 
 REQUIRED_DB_TASK_IDS = ["DB-SCHEMA-BASE", "DB-RLS-BASE", "DB-ACCESS", "DB-SEED-BASE"]
-REQUIRED_E2E_IDS = ["E2E-PUBLIC-SMOKE", "E2E-TRAVEL-TOOLS", "E2E-MATE-AUTH"]
+REQUIRED_E2E_IDS = ["E2E-PUBLIC-SMOKE", "E2E-AUTH-SMOKE"]
 
 FORBIDDEN_KEYWORDS = ["EC2", "AWS", "자동 Merge", "Merge Runner", "머지 러너"]
 # A line that both names a forbidden concept AND negates it (e.g. the standard
@@ -701,6 +701,15 @@ def write_report_md(audit: Audit, task_count: int) -> None:
 # ---------------------------------------------------------------------------
 
 def main() -> int:
+    # On Windows, sys.stdout otherwise defaults to the system locale codepage
+    # (e.g. cp949 on Korean Windows), which silently mis-encodes the Korean
+    # text in check names/hints below. Force UTF-8 so console output and any
+    # redirected/piped log of it are correct regardless of host locale.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     audit = Audit()
 
     if not TASK_LIST_MD.is_file():

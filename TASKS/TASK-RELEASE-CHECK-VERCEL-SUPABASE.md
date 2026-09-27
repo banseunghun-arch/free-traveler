@@ -43,8 +43,7 @@ Vercel 배포 전 최종 수동 점검 체크리스트. 8절(Vercel 배포)의 �
 
 - CI-PIPELINE-BASE
 - E2E-PUBLIC-SMOKE
-- E2E-TRAVEL-TOOLS
-- E2E-MATE-AUTH
+- E2E-AUTH-SMOKE
 
 ## Expected Files
 

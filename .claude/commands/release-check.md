@@ -26,8 +26,9 @@ Read-only release gate. This command does not edit `TASKS/**` or any application
 
 ### 4. Playwright Smoke PASS
 
-- `E2E-PUBLIC-SMOKE`, `E2E-TRAVEL-TOOLS`, `E2E-MATE-AUTH` 3개 Chromium Smoke Task의 최근 실행 결과를 확인한다.
+- `E2E-PUBLIC-SMOKE`, `E2E-AUTH-SMOKE` 2개 Chromium Smoke Task(`tests/e2e/public-smoke.spec.ts`, `tests/e2e/auth-smoke.spec.ts`)의 최근 실행 결과를 확인한다.
 - 이 명령 실행 시점에 로컬에서 직접 재실행할 수 있으면 `npx playwright test --project=chromium`으로 실제 실행해 결과를 확인한다(테스트 실행은 애플리케이션 코드 수정이 아니므로 허용된다). 실행할 수 없는 환경이면(브라우저 미설치 등) 왜 실행할 수 없었는지 밝히고 이 검사를 미해결로 둔다 — 통과했다고 가정하지 않는다.
+- `E2E_TEST_EMAIL`/`E2E_TEST_PASSWORD`가 없어 `E2E-AUTH-SMOKE`가 skip된 경우, 그 자체는 실패가 아니다 — `E2E-PUBLIC-SMOKE`가 실제로 PASS했는지만 확인하고, `E2E-AUTH-SMOKE`가 skip이 아니라 FAIL인 경우에만 이 검사를 실패로 처리한다(DEC-018).
 
 ### 5. Supabase 6개 Table·기본 RLS 확인 기록
 

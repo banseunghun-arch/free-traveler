@@ -74,7 +74,7 @@
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH), Unit(UNIT-CONTACT-DETECTION).
+Playwright(E2E-AUTH-SMOKE), Unit(UNIT-CONTACT-DETECTION).
 
 ## Definition of Done
 

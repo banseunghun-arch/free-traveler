@@ -229,6 +229,14 @@ def check_no_active_aws_ec2() -> list[str]:
 
 
 def main() -> int:
+    # Force UTF-8 stdout so any Korean console output survives on Windows,
+    # where sys.stdout otherwise defaults to the system locale codepage
+    # (e.g. cp949 on Korean Windows) and silently mis-encodes it.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     checks = Checks()
 
     checks.run(1, "package.json has Next.js dependency", check_nextjs_dependency)

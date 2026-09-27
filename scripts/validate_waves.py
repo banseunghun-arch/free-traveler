@@ -28,7 +28,7 @@ Checks (see the audit request that produced this script):
        COMP-SCR003-MATE-COMPOSER.
     5. TASK-PAGE-SCR004 comes after COMP-SCR004-POST-LIST,
        COMP-SCR004-POST-DETAIL and COMP-SCR004-APPLY-FLOW.
-    6. E2E-PUBLIC-SMOKE / E2E-TRAVEL-TOOLS / E2E-MATE-AUTH each come after
+    6. E2E-PUBLIC-SMOKE / E2E-AUTH-SMOKE each come after
        all 5 Page Owner Tasks.
     7. RELEASE-CHECK-VERCEL-SUPABASE comes after every Task it actually
        depends on (per TASK_MANIFEST.csv's Depends On column).
@@ -180,6 +180,14 @@ def before(wave_index_of, position_in_wave_of, dep: str, dependent: str) -> bool
 
 
 def main() -> int:
+    # Force UTF-8 stdout so Korean console output survives on Windows, where
+    # sys.stdout otherwise defaults to the system locale codepage (e.g.
+    # cp949 on Korean Windows) and silently mis-encodes it.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     plan_text = read_text(WAVE_PLAN_MD)
     state_text = read_text(WAVE_STATE_JSON)
     manifest_text = read_text(MANIFEST_CSV)
@@ -284,7 +292,7 @@ def main() -> int:
     # --- Check 6: Playwright Tasks after all 5 Page Owners ------------------
     def check_6(r: CheckResult) -> None:
         page_owner_ids = ["TASK-PAGE-SCR001", "TASK-PAGE-SCR002", "TASK-PAGE-SCR003", "TASK-PAGE-SCR004", "TASK-PAGE-SCR005"]
-        for e2e_id in ["E2E-PUBLIC-SMOKE", "E2E-TRAVEL-TOOLS", "E2E-MATE-AUTH"]:
+        for e2e_id in ["E2E-PUBLIC-SMOKE", "E2E-AUTH-SMOKE"]:
             if e2e_id not in wave_index_of:
                 r.fail(f"{e2e_id}: not found in any Wave")
                 continue

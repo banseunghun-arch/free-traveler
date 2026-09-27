@@ -63,7 +63,7 @@ Section 1. 짧은 Intro와 "동행글 쓰기" CTA. 비로그인 상태에서는 
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH).
+Playwright(E2E-AUTH-SMOKE).
 
 ## Definition of Done
 

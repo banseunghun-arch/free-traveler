@@ -66,7 +66,7 @@ Member 역할 전용 블록. 닉네임·연령대·성별·스타일·소개와 
 
 ## Verify
 
-Playwright(E2E-MATE-AUTH), Integration(TEST-RLS-BASIC).
+Playwright(E2E-AUTH-SMOKE), Integration(TEST-RLS-BASIC).
 
 ## Definition of Done
 

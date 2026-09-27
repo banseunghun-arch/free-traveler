@@ -65,7 +65,7 @@ Admin이 설정하는 항공/호텔/SNS 외부 URL을 HTTPS만 허용해 검증�
 
 ## Verify
 
-E2E-MATE-AUTH, 통합 테스트.
+E2E-AUTH-SMOKE, 통합 테스트.
 
 ## Definition of Done
 
