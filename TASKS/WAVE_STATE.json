@@ -602,11 +602,12 @@
         },
         {
           "task_id": "UNIT-CONTACT-DETECTION",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T16:45:00Z",
+          "note": "Contact pattern detection test suite: 33 tests covering phone, email, messenger ID detection + false positive prevention"
         }
-      ]
+      ],
+      "status": "completed"
     },
     {
       "wave_id": "W16",
