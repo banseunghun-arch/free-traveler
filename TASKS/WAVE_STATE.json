@@ -560,7 +560,7 @@
         "TEST-RLS-BASIC",
         "UNIT-CONTACT-DETECTION"
       ],
-      "status": "in_progress",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
@@ -606,8 +606,7 @@
           "updated_at": "2026-09-27T16:45:00Z",
           "note": "Contact pattern detection test suite: 33 tests covering phone, email, messenger ID detection + false positive prevention"
         }
-      ],
-      "status": "completed"
+      ]
     },
     {
       "wave_id": "W16",
@@ -616,21 +615,21 @@
         "UNIT-MATE-STATE",
         "UNIT-TRAVEL-DATES"
       ],
-      "status": "pending",
+      "status": "completed",
       "checkpoint_required": false,
       "checkpoint_result": null,
       "tasks": [
         {
           "task_id": "UNIT-MATE-STATE",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T17:00:00Z",
+          "note": "22 unit tests: mate post auto-close logic (date + slot-based), participation request state machine (pending→approved/rejected), slot management and duplicate prevention"
         },
         {
           "task_id": "UNIT-TRAVEL-DATES",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T17:02:00Z",
+          "note": "25 unit tests: travel date validation (past date prevention, reverse date prevention, same-day edge case, 365-day limit), null handling, parsing, edge cases (year boundary, leap year, DST)"
         }
       ]
     },
