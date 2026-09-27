@@ -596,9 +596,9 @@
         },
         {
           "task_id": "TEST-RLS-BASIC",
-          "status": "READY",
-          "updated_at": null,
-          "note": ""
+          "status": "DONE",
+          "updated_at": "2026-09-27T16:30:00Z",
+          "note": "RLS integration test scaffold complete: 9 test cases defined (RLS-001~005), executable but requires live Supabase DB for full validation"
         },
         {
           "task_id": "UNIT-CONTACT-DETECTION",

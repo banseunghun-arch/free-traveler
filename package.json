@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "format:check": "prettier --check --no-error-on-unmatched-pattern \"src/**/*.{ts,tsx,js,jsx,json,css}\" \"tests/**/*.{ts,tsx,js,jsx,json}\" \"*.{js,cjs,mjs,ts,json}\" \".github/workflows/**/*.{yml,yaml}\"",
     "test:unit": "vitest run",
+    "test:rls": "vitest run --config vitest.config.rls.ts",
     "test:e2e": "playwright test --project=chromium",
     "test:e2e:public": "playwright test --project=chromium tests/e2e/public-smoke.spec.ts",
     "validate:content": "node scripts/validate_content_data.mjs",
