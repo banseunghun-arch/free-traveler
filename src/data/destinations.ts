@@ -14,7 +14,7 @@ export const destinations: Destination[] = [
     name: "제주도",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1552821206-05e0d2ba5ebf?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
     description: "한라산과 아름다운 해변이 있는 대표 휴양지",
   },
   {
@@ -22,7 +22,7 @@ export const destinations: Destination[] = [
     name: "서울",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1522375890849-66c65c8e4bff?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
     description: "한국의 수도이자 문화와 역사의 중심",
   },
   {
@@ -30,7 +30,7 @@ export const destinations: Destination[] = [
     name: "경주",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1533990122747-4f5e23b34aa3?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
     description: "신라 문화유산이 풍부한 역사 도시",
   },
   {
@@ -38,7 +38,7 @@ export const destinations: Destination[] = [
     name: "부산",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1552821206-22d3e2a8cea0?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1570077189670-809379874b48?w=500&h=400&fit=crop",
     description: "해변과 항구의 매력이 있는 항구도시",
   },
   {
@@ -46,7 +46,7 @@ export const destinations: Destination[] = [
     name: "남이섬",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1522235496844-a5c5e86f2a0e?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1579154204601-01d8cfdd5b13?w=500&h=400&fit=crop",
     description: "영화의 배경지로 유명한 한강 섬",
   },
   {
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
     name: "에버랜드",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1579154204601-01d8cfdd5b13?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
     description: "테마파크와 자연이 어우러진 관광지",
   },
   {
@@ -70,7 +70,7 @@ export const destinations: Destination[] = [
     name: "강릉",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&h=400&fit=crop",
     description: "동해 해변과 동궁원이 있는 강원도 도시",
   },
   {
@@ -78,7 +78,7 @@ export const destinations: Destination[] = [
     name: "전주",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=400&fit=crop",
     description: "한옥마을과 전주 음식이 유명한 전라도 도시",
   },
   {
@@ -104,7 +104,7 @@ export const destinations: Destination[] = [
     name: "교토",
     region: "international",
     country: "일본",
-    imageUrl: "https://images.unsplash.com/photo-1493976040033-1a3e36e45b84?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1522383507911-a88f44e5a1d5?w=500&h=400&fit=crop",
     description: "전통 사원과 문화유산이 풍부한 역사도시",
   },
   {
@@ -112,7 +112,7 @@ export const destinations: Destination[] = [
     name: "방콕",
     region: "international",
     country: "태국",
-    imageUrl: "https://images.unsplash.com/photo-1495799810716-f7fb627b0bbb?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&h=400&fit=crop",
     description: "태국의 수도이자 활기찬 관광도시",
   },
   {
@@ -120,7 +120,7 @@ export const destinations: Destination[] = [
     name: "푸켓",
     region: "international",
     country: "태국",
-    imageUrl: "https://images.unsplash.com/photo-1506212027633-5c8c0a7d2b0c?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
     description: "동남아의 대표 해변 리조트",
   },
   {
@@ -128,7 +128,7 @@ export const destinations: Destination[] = [
     name: "파리",
     region: "international",
     country: "프랑스",
-    imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=400&fit=crop",
     description: "미술과 문화의 중심 유럽 도시",
   },
   {
@@ -144,7 +144,7 @@ export const destinations: Destination[] = [
     name: "런던",
     region: "international",
     country: "영국",
-    imageUrl: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1486299267070-83823e5ca2b7?w=500&h=400&fit=crop",
     description: "영국의 수도이자 역사 도시",
   },
   {
@@ -232,7 +232,7 @@ export const destinations: Destination[] = [
     name: "아부다비",
     region: "international",
     country: "아랍에미리트",
-    imageUrl: "https://images.unsplash.com/photo-1512453333214-7beb9c0a3a0e?w=500&h=400&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
     description: "아랍문화와 현대의 조화",
   },
   {
