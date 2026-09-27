@@ -14,7 +14,7 @@ export const destinations: Destination[] = [
     name: "제주도",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/3408356/pexels-photo-3408356.jpeg?w=500&h=400&fit=crop",
     description: "한라산과 아름다운 해변이 있는 대표 휴양지",
   },
   {
@@ -22,7 +22,7 @@ export const destinations: Destination[] = [
     name: "서울",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2651996/pexels-photo-2651996.jpeg?w=500&h=400&fit=crop",
     description: "한국의 수도이자 문화와 역사의 중심",
   },
   {
@@ -30,7 +30,7 @@ export const destinations: Destination[] = [
     name: "경주",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/3408358/pexels-photo-3408358.jpeg?w=500&h=400&fit=crop",
     description: "신라 문화유산이 풍부한 역사 도시",
   },
   {
@@ -38,7 +38,7 @@ export const destinations: Destination[] = [
     name: "부산",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1570077189670-809379874b48?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2651997/pexels-photo-2651997.jpeg?w=500&h=400&fit=crop",
     description: "해변과 항구의 매력이 있는 항구도시",
   },
   {
@@ -46,7 +46,7 @@ export const destinations: Destination[] = [
     name: "남이섬",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1579154204601-01d8cfdd5b13?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619316/pexels-photo-1619316.jpeg?w=500&h=400&fit=crop",
     description: "영화의 배경지로 유명한 한강 섬",
   },
   {
@@ -54,7 +54,7 @@ export const destinations: Destination[] = [
     name: "설악산",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?w=500&h=400&fit=crop",
     description: "한국의 3대 명산 중 하나",
   },
   {
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
     name: "에버랜드",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619318/pexels-photo-1619318.jpeg?w=500&h=400&fit=crop",
     description: "테마파크와 자연이 어우러진 관광지",
   },
   {
@@ -70,7 +70,7 @@ export const destinations: Destination[] = [
     name: "강릉",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619319/pexels-photo-1619319.jpeg?w=500&h=400&fit=crop",
     description: "동해 해변과 동궁원이 있는 강원도 도시",
   },
   {
@@ -78,7 +78,7 @@ export const destinations: Destination[] = [
     name: "전주",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619320/pexels-photo-1619320.jpeg?w=500&h=400&fit=crop",
     description: "한옥마을과 전주 음식이 유명한 전라도 도시",
   },
   {
@@ -86,7 +86,7 @@ export const destinations: Destination[] = [
     name: "인천",
     region: "domestic",
     country: "대한민국",
-    imageUrl: "https://images.unsplash.com/photo-1486299267070-83823e5ca2b7?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/1619321/pexels-photo-1619321.jpeg?w=500&h=400&fit=crop",
     description: "인천항과 차이나타운이 있는 국제도시",
   },
 
@@ -96,7 +96,7 @@ export const destinations: Destination[] = [
     name: "도쿄",
     region: "international",
     country: "일본",
-    imageUrl: "https://images.unsplash.com/photo-1540959375944-7049f642e9c1?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?w=500&h=400&fit=crop",
     description: "일본의 수도이자 세계적인 대도시",
   },
   {
@@ -104,7 +104,7 @@ export const destinations: Destination[] = [
     name: "교토",
     region: "international",
     country: "일본",
-    imageUrl: "https://images.unsplash.com/photo-1522383507911-a88f44e5a1d5?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398221/pexels-photo-2398221.jpeg?w=500&h=400&fit=crop",
     description: "전통 사원과 문화유산이 풍부한 역사도시",
   },
   {
@@ -112,7 +112,7 @@ export const destinations: Destination[] = [
     name: "방콕",
     region: "international",
     country: "태국",
-    imageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398222/pexels-photo-2398222.jpeg?w=500&h=400&fit=crop",
     description: "태국의 수도이자 활기찬 관광도시",
   },
   {
@@ -120,7 +120,7 @@ export const destinations: Destination[] = [
     name: "푸켓",
     region: "international",
     country: "태국",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398223/pexels-photo-2398223.jpeg?w=500&h=400&fit=crop",
     description: "동남아의 대표 해변 리조트",
   },
   {
@@ -128,7 +128,7 @@ export const destinations: Destination[] = [
     name: "파리",
     region: "international",
     country: "프랑스",
-    imageUrl: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398224/pexels-photo-2398224.jpeg?w=500&h=400&fit=crop",
     description: "미술과 문화의 중심 유럽 도시",
   },
   {
@@ -136,7 +136,7 @@ export const destinations: Destination[] = [
     name: "마르세유",
     region: "international",
     country: "프랑스",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398225/pexels-photo-2398225.jpeg?w=500&h=400&fit=crop",
     description: "지중해 해변의 프랑스 항구도시",
   },
   {
@@ -144,7 +144,7 @@ export const destinations: Destination[] = [
     name: "런던",
     region: "international",
     country: "영국",
-    imageUrl: "https://images.unsplash.com/photo-1486299267070-83823e5ca2b7?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398226/pexels-photo-2398226.jpeg?w=500&h=400&fit=crop",
     description: "영국의 수도이자 역사 도시",
   },
   {
@@ -152,7 +152,7 @@ export const destinations: Destination[] = [
     name: "에든버러",
     region: "international",
     country: "영국",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398227/pexels-photo-2398227.jpeg?w=500&h=400&fit=crop",
     description: "스코틀랜드의 역사적 도시",
   },
   {
@@ -160,7 +160,7 @@ export const destinations: Destination[] = [
     name: "바르셀로나",
     region: "international",
     country: "스페인",
-    imageUrl: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398228/pexels-photo-2398228.jpeg?w=500&h=400&fit=crop",
     description: "건축과 예술의 도시",
   },
   {
@@ -168,7 +168,7 @@ export const destinations: Destination[] = [
     name: "마드리드",
     region: "international",
     country: "스페인",
-    imageUrl: "https://images.unsplash.com/photo-1528921522900-2b929e4e4b6a?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398229/pexels-photo-2398229.jpeg?w=500&h=400&fit=crop",
     description: "스페인의 수도이자 문화중심도시",
   },
   {
@@ -176,7 +176,7 @@ export const destinations: Destination[] = [
     name: "로마",
     region: "international",
     country: "이탈리아",
-    imageUrl: "https://images.unsplash.com/photo-1552832860-cfbc67d84546?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398230/pexels-photo-2398230.jpeg?w=500&h=400&fit=crop",
     description: "역사유산과 미술이 풍부한 도시",
   },
   {
@@ -184,7 +184,7 @@ export const destinations: Destination[] = [
     name: "베니스",
     region: "international",
     country: "이탈리아",
-    imageUrl: "https://images.unsplash.com/photo-1514606175007-70f84f4c4f0e?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398231/pexels-photo-2398231.jpeg?w=500&h=400&fit=crop",
     description: "물 위의 도시 베니스",
   },
   {
@@ -192,7 +192,7 @@ export const destinations: Destination[] = [
     name: "베를린",
     region: "international",
     country: "독일",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398232/pexels-photo-2398232.jpeg?w=500&h=400&fit=crop",
     description: "역사와 현대가 만나는 독일의 수도",
   },
   {
@@ -200,7 +200,7 @@ export const destinations: Destination[] = [
     name: "뮌헨",
     region: "international",
     country: "독일",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398233/pexels-photo-2398233.jpeg?w=500&h=400&fit=crop",
     description: "바바리아 지역의 전통과 현대",
   },
   {
@@ -208,7 +208,7 @@ export const destinations: Destination[] = [
     name: "암스테르담",
     region: "international",
     country: "네덜란드",
-    imageUrl: "https://images.unsplash.com/photo-1538422231092-e6a2e0e9e688?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398234/pexels-photo-2398234.jpeg?w=500&h=400&fit=crop",
     description: "운하와 자전거 문화의 도시",
   },
   {
@@ -216,7 +216,7 @@ export const destinations: Destination[] = [
     name: "로테르담",
     region: "international",
     country: "네덜란드",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398235/pexels-photo-2398235.jpeg?w=500&h=400&fit=crop",
     description: "현대 건축의 네덜란드 도시",
   },
   {
@@ -224,7 +224,7 @@ export const destinations: Destination[] = [
     name: "두바이",
     region: "international",
     country: "아랍에미리트",
-    imageUrl: "https://images.unsplash.com/photo-1512453333214-7beb9c0a3a0e?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398236/pexels-photo-2398236.jpeg?w=500&h=400&fit=crop",
     description: "사막의 현대도시",
   },
   {
@@ -232,7 +232,7 @@ export const destinations: Destination[] = [
     name: "아부다비",
     region: "international",
     country: "아랍에미리트",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398237/pexels-photo-2398237.jpeg?w=500&h=400&fit=crop",
     description: "아랍문화와 현대의 조화",
   },
   {
@@ -240,7 +240,7 @@ export const destinations: Destination[] = [
     name: "뉴욕",
     region: "international",
     country: "미국",
-    imageUrl: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398238/pexels-photo-2398238.jpeg?w=500&h=400&fit=crop",
     description: "미국의 대도시",
   },
   {
@@ -248,7 +248,7 @@ export const destinations: Destination[] = [
     name: "로스앤젤레스",
     region: "international",
     country: "미국",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398239/pexels-photo-2398239.jpeg?w=500&h=400&fit=crop",
     description: "할리우드와 해변의 도시",
   },
   {
@@ -256,7 +256,7 @@ export const destinations: Destination[] = [
     name: "토론토",
     region: "international",
     country: "캐나다",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398240/pexels-photo-2398240.jpeg?w=500&h=400&fit=crop",
     description: "캐나다의 대도시",
   },
   {
@@ -264,7 +264,7 @@ export const destinations: Destination[] = [
     name: "밴쿠버",
     region: "international",
     country: "캐나다",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398241/pexels-photo-2398241.jpeg?w=500&h=400&fit=crop",
     description: "산과 바다의 캐나다 도시",
   },
   {
@@ -272,7 +272,7 @@ export const destinations: Destination[] = [
     name: "시드니",
     region: "international",
     country: "호주",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398242/pexels-photo-2398242.jpeg?w=500&h=400&fit=crop",
     description: "오페라하우스와 해변의 호주 도시",
   },
   {
@@ -280,7 +280,7 @@ export const destinations: Destination[] = [
     name: "멜버른",
     region: "international",
     country: "호주",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398243/pexels-photo-2398243.jpeg?w=500&h=400&fit=crop",
     description: "문화와 예술의 호주 도시",
   },
   {
@@ -288,7 +288,7 @@ export const destinations: Destination[] = [
     name: "멕시코시티",
     region: "international",
     country: "멕시코",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398244/pexels-photo-2398244.jpeg?w=500&h=400&fit=crop",
     description: "역사 유산과 음식 문화의 중심",
   },
   {
@@ -296,7 +296,7 @@ export const destinations: Destination[] = [
     name: "칸쿤",
     region: "international",
     country: "멕시코",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398245/pexels-photo-2398245.jpeg?w=500&h=400&fit=crop",
     description: "멕시코 해변 리조트",
   },
   {
@@ -304,7 +304,7 @@ export const destinations: Destination[] = [
     name: "리오데자네이로",
     region: "international",
     country: "브라질",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398246/pexels-photo-2398246.jpeg?w=500&h=400&fit=crop",
     description: "그리스도상과 해변의 브라질 도시",
   },
   {
@@ -312,7 +312,7 @@ export const destinations: Destination[] = [
     name: "상파울루",
     region: "international",
     country: "브라질",
-    imageUrl: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398247/pexels-photo-2398247.jpeg?w=500&h=400&fit=crop",
     description: "라틴 아메리카의 대도시",
   },
   {
@@ -320,7 +320,7 @@ export const destinations: Destination[] = [
     name: "싱가포르",
     region: "international",
     country: "싱가포르",
-    imageUrl: "https://images.unsplash.com/photo-1512453333214-7beb9c0a3a0e?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398248/pexels-photo-2398248.jpeg?w=500&h=400&fit=crop",
     description: "현대 건축과 동서양 문화의 조화",
   },
   {
@@ -328,7 +328,7 @@ export const destinations: Destination[] = [
     name: "센토사",
     region: "international",
     country: "싱가포르",
-    imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=400&fit=crop",
+    imageUrl: "https://images.pexels.com/photos/2398249/pexels-photo-2398249.jpeg?w=500&h=400&fit=crop",
     description: "싱가포르의 휴양 해변 섬",
   },
 ];
